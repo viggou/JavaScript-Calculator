@@ -1,0 +1,59 @@
+<html><head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+		
+        <!-- Javascript calculator -->
+		<script>
+			function performOperation(operator) {
+				var x = parseInt(document.getElementById('txt1').value);
+				var y = parseInt(document.getElementById('txt2').value);
+				
+				// Operations
+				var result;
+				switch(operator) {
+					case "+":
+						result = x + y;
+						break;
+					case "-":
+						result = x - y;
+						break;
+					case "*":
+						result = x * y;
+						break;
+					case "/":
+						if (y == 0)
+							result = "Error"
+						else
+							result = x / y;
+						break;
+				}
+				
+				document.getElementById('result').value = result;
+			}
+		
+		</script>
+		
+</head>
+
+	<body>
+    	
+        <h2 style="color:#FF0004">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to use:</h2>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type in the <u>two</u> numbers that you would like calculate, <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then press one of the operators to get the result!</p>
+        
+        
+        
+        <!-- Textfields and buttons -->
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txt1" placeholder="1st. Number" autofocus="">
+        
+    	<button onclick="performOperation('+')"> + </button>
+    	<button onclick="performOperation('-')"> - </button>
+    	<button onclick="performOperation('*')"> * </button>
+    	<button onclick="performOperation('/')"> / </button>
+        
+    	<input type="text" id="txt2" placeholder="2nd. Number">
+    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result: </p>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="result" placeholder="Don't type here"> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Author: <a href="https://youtube.com/user/yaypixxo">PIXX</a></p>
+        
+   	
+</body></html>
