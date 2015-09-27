@@ -4,4 +4,4 @@ This is a very simple calculator. If you wanna edit it and make better or someth
 Please leave a comment on the repo.
 Hope you like it!
 
-Version 1.3
+Version 1.4
