@@ -1,4 +1,6 @@
-<html><head>
+<!doctype html>
+<html>
+<head>
 <meta charset="UTF-8">
 <title>Calculator</title>
 		
@@ -15,20 +17,20 @@
 						result = x + y;
 						break;
 					case "-":
-						result = x - y;
+						result = x - y;v
 						break;
 					case "*":
 						result = x * y;
 						break;
 					case "/":
 						if (y == 0)
-							result = "Can't devide with 0"
+							result = "Error"
 						else
 							result = x / y;
 						break;
-                                     	default:
-                                             result = 0;
-                                             break;
+					default:
+						result = 0;
+						break;
 				}
 				
 				document.getElementById('result').value = result;
@@ -47,16 +49,27 @@
         
         
         <!-- Textfields and buttons -->
-    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txt1" placeholder="1st. Number" autofocus="">
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txt1" placeholder="1st. Number" autofocus />
         
-    	<button onclick="performOperation('+')"> + </button>
-    	<button onclick="performOperation('-')"> - </button>
-    	<button onclick="performOperation('*')"> * </button>
-    	<button onclick="performOperation('/')"> / </button>
+    	<button onClick="performOperation('+')"> + </button>
+    	<button onClick="performOperation('-')"> - </button>
+    	<button onClick="performOperation('*')"> * </button>
+    	<button onClick="performOperation('/')"> / </button>
         
-    	<input type="text" id="txt2" placeholder="2nd. Number">
+    	<input type="text" id="txt2" placeholder="2nd. Number" /> 
+        
+        
+            
     	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result: </p>
-    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="result" placeholder="Don't type here"> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Author: <a href="https://youtube.com/user/yaypixxo">PIXX</a></p>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="result" placeholder="Don't type here"/> <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="for (i = 2; i < 22; i += 2) {
+				alert(i);
+			}">Table 2</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   		
         
-   	
-</body></html>
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Author: <a href="https://youtube.com/user/yaypixxo">PIXX</a></p>
+        
+        
+   	</body>
+</html>
