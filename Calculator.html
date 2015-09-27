@@ -14,16 +14,35 @@
 				var result;
 				switch(operator) {
 					case "+":
-						result = x + y;
+						if (x && y == "")
+							result = "Empty";
+						else if (isNaN(x || y))
+							result = "Not a number";
+						else
+							result = x + y;
 						break;
 					case "-":
-						result = x - y;v
+						if (x && y == "")
+							result = "Empty";
+						else if (isNaN(x || y))
+							result = "Not a number";
+						else
+							result = x - y;
 						break;
 					case "*":
-						result = x * y;
+						if (x && y == "")
+							result = "Empty";
+						else if (isNaN(x || y))
+							result = "Not a number";
+						else
+							result = x * y;
 						break;
 					case "/":
-						if (y == 0)
+						if (x && y == "")
+							result = "Empty";
+						else if (isNaN(x || y))
+							result = "Not a number";
+						else if (y == 0)
 							result = "Error"
 						else
 							result = x / y;
@@ -35,7 +54,23 @@
 				
 				document.getElementById('result').value = result;
 			}
-		
+			
+			// Table calculatorv
+			function printTable(element) {
+				var table = parseInt(element.value);
+				var result2 = document.getElementById('result2');
+				
+				for (i = table; i <= table*10; i += table)
+				result2.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + i + ", ";
+				
+				result2.innerHTML += "<br>";
+			}
+			
+			// Reload button
+			function reloadAll() {
+				window.location.reload()
+			}
+			
 		</script>
 		
 </head>
@@ -46,50 +81,35 @@
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type in the <u>two</u> numbers that you would like calculate, <br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then press one of the operators to get the result!</p>
         
-        
-        
+                
         <!-- Textfields and buttons -->
-    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txt1" placeholder="1st. Number" autofocus />
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="numb" id="txt1" placeholder="1st. Number" autofocus />
         
     	<button onClick="performOperation('+')"> + </button>
     	<button onClick="performOperation('-')"> - </button>
     	<button onClick="performOperation('*')"> * </button>
     	<button onClick="performOperation('/')"> / </button>
         
-    	<input type="text" id="txt2" placeholder="2nd. Number" /> 
+    	<input type="numb" id="txt2" placeholder="2nd. Number" /> 
         
         
             
     	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result: </p>
-    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="result" placeholder="Don't type here"/> <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="for (i = 1; i < 11; i += 1) {
-				alert(i);
-			}">Table 1</button><button onClick="for (i = 2; i < 22; i += 2) {
-				alert(i);
-			}">Table 2</button><button onClick="for (i = 3; i < 33; i += 3) {
-				alert(i);
-			}">Table 3</button><button onClick="for (i = 4; i < 44; i += 4) {
-				alert(i);
-			}">Table 4</button><button onClick="for (i = 5; i < 55; i += 5) {
-				alert(i);
-			}">Table 5</button><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="for (i = 6; i < 66; i += 6) {
-				alert(i);
-			}">Table 6</button><button onClick="for (i = 7; i < 77; i += 7) {
-				alert(i);
-			}">Table 7</button><button onClick="for (i = 8; i < 88; i += 8) {
-				alert(i);
-			}">Table 8</button><button onClick="for (i = 9; i < 99; i += 9) {
-				alert(i);
-			}">Table 9</button><button onClick="for (i = 10; i < 110; i += 10) {
-				alert(i);
-			}">Table 10</button>
-            
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="result" placeholder="Don't type here"/><br>
+        
+        <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    		
         
             
             Author: <a href="https://youtube.com/user/yaypixxo">PIXX</a></p>
+            
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Table calculator:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="reloadAll()">Reset All</button></h2>
+        
+        
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="numb" onChange="printTable(this)" placeholder="Example: 10" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p id="result2"></p>
         
         
    	</body>
