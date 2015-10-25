@@ -81,37 +81,33 @@
 
 	<body>
     	
-        <h2 style="color:#FF0004">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to use:</h2>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type in the <u>two</u> numbers that you would like calculate, <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then press one of the operators to get the result!</p>
+    <div style="margin-left:70px;">
+        <h2 style="color:#FF0004">How to use:</h2>
+        <p>Type in the <u>two</u> numbers that you would like calculate, <br>
+	  then press one of the operators to get the result!</p>
         
                 
         <!-- Textfields and buttons -->
-    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="numb" id="txt1" placeholder="1st. Number" autofocus />
+      <input type="number" id="txt1" placeholder="1st. Number" autofocus />
         
     	<button onClick="performOperation('+')"> + </button>
     	<button onClick="performOperation('-')"> - </button>
     	<button onClick="performOperation('*')"> * </button>
     	<button onClick="performOperation('/')"> / </button>
         
-    	<input type="numb" id="txt2" placeholder="2nd. Number" /> 
-        
-        
+    	<input type="number" id="txt2" placeholder="2nd. Number" /> 
             
-    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Result: </p>
-    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="result" placeholder="Don't type here"/><br>
+   	  <p> Result: </p>
+    	<input type="text" id="result" placeholder="Don't type here" disabled/>
+    	<div style="margin-left:300px;">
+    	<p>Author: <a href="https://youtube.com/user/yaypixxo" onMouseOver="changeColor(this, 'gold')" onMouseOut="changeColor(this, 'blue')">PIXX</a><br>
+   	    </p>
+   	    </div>
+      <h2>Table calculator:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="reloadAll()">Reset All</button></h2>
         
-        <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Author: <a href="https://youtube.com/user/yaypixxo" onMouseOver="changeColor(this, 'gold')" onMouseOut="changeColor(this, 'blue')">PIXX</a></p>
-            
-        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Table calculator:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onClick="reloadAll()" onClick="changeColor(this, 'red')">Reset All</button></h2>
-        
-        
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="numb" onChange="printTable(this)" placeholder="Example: 10" /> <button onClick="changeColor(this, 'gold')" onMouseOut="changeColor(this, 'black')"> Calculate </button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p id="result2"></p>
-        
+      <input type="number" onChange="printTable(this)" placeholder="Example: 10" /> <button onClick="changeColor(this, 'gold')" onMouseOut="changeColor(this, 'black')"> Calculate </button>
+      <p id="result2"></p>
+        </div>
         
    	</body>
 </html>
